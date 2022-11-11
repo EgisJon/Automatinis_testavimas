@@ -17,15 +17,14 @@ public class HomeWork {
     public void testIfNumberFourIsEven() {
         //1. Pateikiam duomenis
         int tikrimasisSkaicius = 4;
-        boolean expectedResult = true;
-        boolean actualResult = true;
+        int expectedResult = 0;
+        int actualResult;
 
         //2. Atliekame testo veiksmus
-        if (tikrimasisSkaicius % 2 == 0) {
-        }
-        //3. Palyginam rezultatus
-        Assert.assertEquals(expectedResult, actualResult);
+        actualResult = tikrimasisSkaicius % 2;
 
+        //3. Palyginam rezultatus
+        Assert.assertEquals(actualResult, expectedResult);
     }
 
     /**
