@@ -37,7 +37,10 @@ public class Common {
         getElement(locator).click();
     }
 
+
+
     public static String getTextFromElement(By locator) {
         return getElement(locator).getText();
+
     }
 }
