@@ -18,10 +18,10 @@ public class HomeWorkSeleniumEasySingleFormDemo {
         String expecteResult = "Labas vakaras";
         String actualResult;
 
-        WebElement testSingleInputField = Direver.getDriver().findElement(By.xpath("//*[@id='user-messge']"));
+        WebElement testSingleInputField = Direver.getDriver().findElement(By.xpath("//*[@id='user-message']"));
         testSingleInputField.sendKeys(expecteResult);
 
-        WebElement buttonshowMessge = Direver.getDriver().findElement(By.xpath("//button[@id='Show Message']"));
+        WebElement buttonshowMessge = Direver.getDriver().findElement(By.xpath("//*[@id='get-input']/button"));
         buttonshowMessge.click();
 
         WebElement paragraftestSingleInputField = Direver.getDriver().findElement(By.xpath("//p[@id='Yor Message']"));

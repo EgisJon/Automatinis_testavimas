@@ -1,16 +1,23 @@
 package pom.test.demoepa;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pom.pages.demoepa.TextBox_Pages;
 
 
 public class TextBoxTest {
 
+    @BeforeMethod
+    public void setUp(){
+        TextBox_Pages.openUrl("https://demoqa.com/text-box");
+    }
+
 
     @Test
     public void testInputFullName() {
-        TextBox_Pages.openUrl("https://demoqa.com/text-box");
+
 
         String expectedResult = "Egidijus";
         String actualResult;
@@ -31,7 +38,7 @@ public class TextBoxTest {
     }
     @Test
     public void testInputEmail(){
-        TextBox_Pages.openUrl("https://demoqa.com/text-box");
+
 
         String expectedResult = "egis331@gmail.com";
         String actualResult;
@@ -48,7 +55,10 @@ public class TextBoxTest {
 
         TextBox_Pages.sleep(2000);
 
-        TextBox_Pages.close();
+
+    }
+    @AfterMethod
+    public void close(){
 
     }
 }
